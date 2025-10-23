@@ -1,0 +1,89 @@
+#header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    font: 16px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: #E9E9E9;
+    border-bottom: 1px solid #E9E9E9;
+    width: 150px;
+}
+
+#snow {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 10px 20px;
+    color: #E9E9E9;
+    font: 15px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    white-space: nowrap;
+}
+
+#snow:hover {
+    background-color: #1e1e1e;
+}
+
+
+
+
+
+
+
+.layout {
+    display: flex;
+    height: calc(100vh - 80px);
+    background-color: #28282B;
+}
+
+.menu {
+    width: 250px;
+    background-color: #1e1e1e;
+    border-right: 1px solid #333;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background-color: #28282B;
+    overflow: auto;
+}
+
+.empty {
+    text-align: center;
+    padding: 60px 30px;
+    color: #ccc;
+}
+
+.empty h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* talk to chris before finalizing the border.. */
+
+#SnowRider {
+    width: 1300px;
+    height: 600px;
+    border: none;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    max-width: 1000px;
+}
+
+#adminLogin {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin: 50px;
+    cursor: pointer;
+    text-decoration: white underline;
+    margin-top: 600px;
+}
