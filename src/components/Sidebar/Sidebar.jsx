@@ -14,9 +14,15 @@ function Sidebar({ onNavigateToLogin }) {
             return (
                 <div>
                     {/* Yeah.. you gotta get that for yourself! */}
-                    {/* Iframe for now... Eventoully we gotta find a way to make it go into a about:blank (I got no clue how to do that :3) url for bypass */}
-                    <iframe src="{SNOW_RIDER_URL}" frameborder="0" id="SnowRider" target="about:blank"></iframe>
-
+                    {/* Iframe for now... Eventually we gotta find a way to make it go into a about:blank url for bypass */}
+                    <iframe 
+                        src="about:blank" 
+                        frameBorder="0" 
+                        id="SnowRider" 
+                        title="Snow Rider Game"
+                        sandbox=""
+                        style={{width: '100%', height: '500px'}}
+                    ></iframe>
                 </div>
             );
         }
