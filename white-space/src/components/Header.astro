@@ -1,0 +1,81 @@
+---
+    const base = Astro.site || 'http://localhost:4321';
+    const res = await fetch(`${base}/api/version`);
+    const data = await res.json();
+---
+
+<header>
+    <div class="container">
+        <img src={"/whitespace.png"} alt="logo" id="logo" draggable="false"/>
+    </div>
+    <p id="v">Currently running: {data.version}</p>
+</header>
+
+
+<style>
+    header {
+        position: relative;
+        min-height: 120px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 16px 24px;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    #logo {
+        width: 180px;
+        max-width: 40vw;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    #v {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        font-size: 1rem;
+        color: gray;
+        margin: 0;
+        padding: 8px 12px;
+        word-break: break-word;
+        width: max-content;
+        background: transparent;
+        z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 12px 8px;
+            gap: 8px;
+        }
+        #logo {
+            width: 120px;
+            max-width: 60vw;
+        }
+        #v {
+            font-size: 0.95rem;
+            left: 0;
+            bottom: 0;
+            padding: 8px 8px;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 1024px) {
+        #logo {
+            width: 150px;
+            max-width: 30vw
+        }
+        #v {
+            font-size: 1rem;
+        }
+    }
+</style>
