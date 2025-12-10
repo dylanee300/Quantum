@@ -5,6 +5,12 @@ import Header from '../components/Header.astro';
 
 <Layout>
 	<Header />
+
+	<div>
+		<h1 id="welcome">Welcome to White Space</h1>
+		<button id="continue">Continue</button>
+	</div>
+
 </Layout>
 
 <style>
@@ -14,4 +20,25 @@ import Header from '../components/Header.astro';
          background-size: cover;
 		background-size: 50%;
     }
+
+	#welcome {
+		font-size: 50px;
+		color: #2f2f2f;
+		text-align: center;
+		margin-top: 100px;
+		font-family: 'Courier New', Courier, monospace;
+	}
+
+	#continue {
+		display: block;
+		width: 200px;
+		height: 50px;
+		background-color: #343434;
+		color: white;
+		border: none;
+		border-radius: 3px;
+		margin: 50px auto;
+		font-size: 20px;
+		cursor: pointer;
+	}
 </style>
