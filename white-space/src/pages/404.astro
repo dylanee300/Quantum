@@ -3,16 +3,22 @@
 
 
 <div class="four04">
-    {/* DON'T CHANGE */}
-    <h1 id="four04">404</h1>
 
-    <h1 id="areyoulostbud">Are you lost?</h1>
+    
+
+    <img src={'/404.png'} alt="white-space" id="whitespace404" draggable="false" width="200px" height="200px"/>
     <p id="sub">We've never heard of this page</p>
 
-    <img src={'/whitespace.png'} alt="white-space" id="whitespace404" draggable="false">
 </div>
 
 <style>
+        .four04 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
      body {
         background-image: url('/backround.png');
         overflow: hidden;
@@ -36,17 +42,19 @@
     #sub {
         font-size: 20px;
         text-align: center;
-        margin-top: 1px;           		font-family: 'Courier New', Courier, monospace;
+        margin-top: 20px;         
+        font-family: 'Courier New', Courier, monospace;
 
     }
 
 
     
     #whitespace404 {
-        width: 100px;
-        height: 100px;
-        margin: 20px auto 0 auto;
-        display: block;
+            width: 300px;
+            height: 300px;
+            margin: 20px auto 0 auto;
+            display: block;
+            border-radius: 15px;
     }
   
 </style>
