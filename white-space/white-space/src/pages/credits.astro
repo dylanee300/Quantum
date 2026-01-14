@@ -1,0 +1,31 @@
+---
+import CreditCard from "../components/creditcard.svelte"
+
+const base = ((Astro.site ? Astro.site.toString() : "http://localhost:4321").replace(/\/+$/, ""))
+const res = await fetch(`${base}/api/credits`)
+const data = await res.json()
+---
+
+
+<div class="credits">
+    {data.credits.map((credit: { name: string; pfp: string; desc: string }) => (
+        <CreditCard name={credit.name} pfp={credit.pfp} desc={credit.desc} />
+    ))}
+</div>
+
+<style>
+    body {
+        background-image: url('/backround.png');
+        overflow: hidden;
+        background-size: cover;
+    }
+
+    .credits {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        gap: 40px;
+    }
+</style>
